@@ -1,0 +1,44 @@
+<!-- Navbar Start -->
+<nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
+
+  <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+    <img src="assets/img/logo-solo.png" alt="logo" width="45" class="m-2">
+    <h1 class="m-0">Eco Points</h1>
+  </a>
+  <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+    <div class="navbar-nav ms-auto p-4 p-lg-0">
+
+      <a class="nav-item nav-link active" [routerLink]="['/']">Inicio</a>
+      <a class="nav-item nav-link" [routerLink]="['/acerca']">Acerca</a>
+      <a class="nav-item nav-link" [routerLink]="['/misiones']">Misiones</a>
+      <a class="nav-item nav-link" [routerLink]="['/recompensas']">Recompensas</a>
+
+      <a class="nav-item nav-link" [routerLink]="['/contacto']">Contacto</a>
+
+      <!-- Otras opciones de navegación -->
+      <a *ngIf="!userData" [routerLink]="['/login']"
+        class="nav-item nav-link bg-success p-4 px-lg-4 m-0 text-white">Login<i class="fa fa-user ms-3"></i></a>
+
+      <div *ngIf="userData" class="d-flex">
+        <a class="nav-item nav-link" [routerLink]="['/canje']">Canje</a>
+
+        <ng-container class="nav-item nav-link">
+          <div class=" pt-3 mb-0 small w-100">
+            <div class="d-flex justify-content-between">
+              <strong class="text-gray-dark">Bienvenido, {{ userData.nombres }}</strong>
+            </div>
+            <span class="d-block">Puntos: {{ userData.puntos }}</span>
+
+          </div>
+          <a class="btn btn-danger py-4 px-lg-4 rounded-0 d-none d-lg-block" (click)="logout()">Salir<i
+              class="fas fa-sign-out-alt ms-3"></i></a>
+        </ng-container>
+      </div>
+    </div>
+
+  </div>
+</nav>
+<!-- Navbar End -->

@@ -1,0 +1,72 @@
+<!-- Modal -->
+<div #myModal class="modal " id="exampleModalCenter" tabindex="-1" role="dialog"
+  aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Ingresar Codigo Validación</h5>
+      </div>
+      <div class="modal-body">
+        <input type="text" [(ngModel)]="codigoValidacion" placeholder="Código de validación" required>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="closeModal()">Cerrar</button>
+        <button (click)="verificarCodigo()" type="button" class="btn btn-primary">Enviar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="container-fluid login-register-page">
+  <div class="row">
+    <!-- Agrega un botón o enlace para abrir el modal -->
+
+    <div class="col-xl-3 col-lg-5 col-md-8 mx-auto">
+      <div class="card my-2">
+        <div class="card-body">
+
+          <form class="login-register-form" ngNativeValidate [formGroup]="registerForm"
+            (ngSubmit)="registrarUsuario(registerForm.value)">
+            <a [routerLink]="['/']" class="text-nowrap logo-img text-center d-block py-3 w-100">
+              <img src="assets/img/logo.png" width="150" alt="">
+            </a>
+            <h2 class="card-title text-white text-center">Registrar</h2>
+            <div class="mb-3">
+              <label for="Nombres" class="form-label">Nombres</label>
+              <input type="text" class="form-control" id="Nombres" aria-describedby="nombresHelp"
+                formControlName="nombres" required>
+            </div>
+            <div class="mb-3">
+              <label for="direccion" class="form-label">Direccion </label>
+              <input type="text" class="form-control" id="direccion" aria-describedby="direccionHelp"
+                formControlName="direccion" required>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email </label>
+              <input type="email" class="form-control" id="email" aria-describedby="emailHelp" formControlName="email"
+                required>
+            </div>
+
+            <div class="mb-3">
+              <label for="Password" class="form-label">Contraseña</label>
+              <input type="password" id="clave" formControlName="clave" required
+                class="form-control ng-untouched ng-pristine ng-invalid" autocomplete="current-password">
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100 py-8 fs-4 mb-4 rounded-2">Guardar</button>
+            <div class="d-flex ">
+              <a href="/login" class="btn btn-outline-warning w-100 py-8 fs-4 mb-4 rounded-2"
+                target="_self">Regresar</a>
+
+              <a (click)="openModal()" class="btn btn-outline-warning w-100 py-8 fs-4 mb-4 rounded-2"
+                target="_self">Validar</a>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

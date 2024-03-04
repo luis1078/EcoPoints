@@ -1,0 +1,52 @@
+<section id="recompensas">
+  <!-- Page Header Start -->
+  <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container text-center py-5">
+      <h1 class="display-3 text-white mb-4 animated slideInDown">Recompensas</h1>
+      <nav aria-label="breadcrumb animated slideInDown">
+        <ol class="breadcrumb justify-content-center mb-0">
+          <li class="breadcrumb-item"><a href="/">Inicio</a></li>
+
+          <li class="breadcrumb-item active" aria-current="page">Recompensas</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+  <!-- Page Header End -->
+
+
+  <!-- Projects Start -->
+  <div class="container-xxl py-5">
+    <div class="container">
+      <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+        <p class="fs-5 fw-bold text-primary">Consigue puntos y llevate grandes cosas</p>
+        <h1 class="display-5 mb-5">Recompensas</h1>
+      </div>
+
+      <div class="row g-4 portfolio-container">
+        <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.3s"
+          *ngFor="let item of listaRecompensa">
+          <div class="portfolio-inner rounded">
+            <img class="img-fluid" src="assets/{{item.img_recompensa}}" alt="">
+            <div class="portfolio-text">
+              <h4 class="text-white mb-4">{{item.nom_recompensa}} </h4>
+              <h4 class="text-white mb-4">{{item.puntos_recompensa}} Puntos</h4>
+              <div class="d-flex">
+                <a class="btn btn-lg-square rounded-circle mx-2" href="assets/{{item.img_recompensa}}"
+                  data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                <a class="btn btn-lg-square rounded-circle mx-2" href=""><i class="fa fa-link"
+                  (click)="agregarCarrito(item)"
+                  ></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+  <!-- Projects End -->
+
+
+</section>
