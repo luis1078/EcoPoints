@@ -1,0 +1,57 @@
+{
+  "name": "app-eco-points",
+  "version": "0.0.0",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "~16.0.3",
+    "@angular/common": "~16.0.3",
+    "@angular/compiler": "~16.0.3",
+    "@angular/core": "~16.0.3",
+    "@angular/forms": "~16.0.3",
+    "@angular/platform-browser": "~16.0.3",
+    "@angular/platform-browser-dynamic": "~16.0.3",
+    "@angular/router": "~16.0.3",
+    "bootstrap": "^5.2.3",
+    "bootstrap-icons": "^1.10.5",
+    "ngx-filter-pipe": "^2.1.2",
+    "rxjs": "~7.8.1",
+    "set-value": "^4.1.0",
+    "tslib": "^2.5.2",
+    "zone.js": "~0.13.0"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^16.0.2",
+    "@angular/cli": "~16.0.2",
+    "@angular/compiler-cli": "~16.0.3",
+    "@types/bcryptjs": "^2.4.2",
+    "@types/bootstrap": "^5.2.6",
+    "@types/jasmine": "~4.3.1",
+    "@types/node": "^20.2.3",
+    "jasmine-core": "^4.6.0",
+    "karma": "~6.4.2",
+    "karma-chrome-launcher": "~3.2.0",
+    "karma-coverage": "~2.2.0",
+    "karma-jasmine": "~5.1.0",
+    "karma-jasmine-html-reporter": "~2.0.0",
+    "typescript": "~5.0.4"
+  },
+  "browser": {
+    "fs": false,
+    "path": false,
+    "os": false,
+    "crypto": false,
+    "stream": false,
+    "http": false,
+    "tls": false,
+    "zlib": false,
+    "https": false,
+    "net": false
+  }
+}

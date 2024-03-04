@@ -1,0 +1,52 @@
+<!-- Page Header Start -->
+<div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
+  <div class="container text-center py-5">
+    <h1 class="display-3 text-white mb-4 animated slideInDown">Canje</h1>
+    <nav aria-label="breadcrumb animated slideInDown">
+      <ol class="breadcrumb justify-content-center mb-0">
+        <li class="breadcrumb-item"><a href="/">Inicio</a></li>
+
+        <li class="breadcrumb-item active" aria-current="page">Canje</li>
+      </ol>
+    </nav>
+  </div>
+</div>
+<!-- Page Header End -->
+
+
+<!-- Projects Start -->
+<div class="container-xxl py-5">
+  <div class="container">
+
+    <section class="padded">
+      <div class="container">
+        <div class="col-6 mx-auto">
+          <table class="table table-bordered table-striped table-hover">
+            <thead class="table-dark">
+              <tr>
+                <th>Cod</th>
+                <th>Nombre</th>
+                <th>Precio</th>
+                <th>Cantidad</th>
+                <th>Subtotal</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of listaItemsRecompensas">
+                <td>{{item.idrecompensa}}</td>
+                <td>{{item.nombre}}</td>
+                <td>{{item.nombre |number:'.2'}}</td>
+                <td>{{item.cantidad }}</td>
+                <td>{{item.puntos! * item.cantidad!|number:'.2'}}</td>
+
+              </tr>
+
+            </tbody>
+          </table>
+          <button class="btn btn-danger" (click)="vaciarCarrito()">Vaciar Carrito</button>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+<!-- Projects End -->

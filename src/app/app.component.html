@@ -1,0 +1,19 @@
+<!-- Toaster -->
+<app-toaster></app-toaster>
+<!-- app.component.html -->
+<ng-container *ngIf="isLoginPage() || isRegisterPage()">
+  <!-- No se muestra el encabezado, navegación y pie de página -->
+  <router-outlet></router-outlet>
+</ng-container>
+
+<ng-container *ngIf="!isLoginPage() && !isRegisterPage()">
+  <!-- Mostrar encabezado, navegación y pie de página -->
+
+  <app-main-header></app-main-header>
+  <app-main-nav></app-main-nav>
+
+  <main>
+    <router-outlet></router-outlet>
+  </main>
+  <app-main-footer></app-main-footer>
+</ng-container>
